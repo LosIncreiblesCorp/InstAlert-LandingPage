@@ -1,0 +1,84 @@
+{
+  "page": {
+    "title": "InstAlert - Real-time Commercial Security"
+  },
+  "nav": {
+    "home": "Home",
+    "plans": "Plans",
+    "testimonials": "Testimonials",
+    "about": "About Us",
+    "team": "Team",
+    "login": "Sign In"
+  },
+  "hero": {
+    "titleBefore": "Protect your business from ",
+    "titleHighlight": "threats",
+    "titleAfter": " in real-time",
+    "subtitle": "Intelligent security for commercial establishments",
+    "description": "Connect with neighboring stores, receive instant alerts, and act immediately to protect your staff and assets.",
+    "cta": "Sign In",
+    "imageAlt": "Commercial risk map"
+  },
+  "plans": {
+    "title": "Business Plans",
+    "basic": {
+      "name": "Basic",
+      "price": "Free",
+      "feature1": "Store-to-store alert network",
+      "feature2": "Quick incident reporting",
+      "cta": "Choose"
+    },
+    "standard": {
+      "name": "Standard",
+      "price": "S/ 19.90",
+      "feature1": "Everything in Basic",
+      "feature2": "Staff panic button",
+      "feature3": "Vulnerable areas map",
+      "cta": "Choose"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "S/ 39.90",
+      "feature1": "Connection to authorities",
+      "feature2": "Camera integration",
+      "cta": "Choose"
+    }
+  },
+  "testimonials": {
+    "title": "Safe Business Network",
+    "subtitle": "What owners and staff who already use InstAlert to protect their establishments have to say.",
+    "t1": {
+      "text": "\"As a vendor, having InstAlert at the counter gives me peace of mind. Knowing instantly what happens in neighboring stores keeps us prepared.\"",
+      "name": "Carla Méndez",
+      "role": "Operational Staff"
+    },
+    "t2": {
+      "text": "\"The panic button saved us from an incident last week. The quick response and the automatic alert to the rest of the commercial sector was vital.\"",
+      "name": "Juan Pablo Ruiz",
+      "role": "Store Manager"
+    },
+    "t3": {
+      "text": "\"I have three branches in high-risk areas, and the platform allows me to monitor the safety of my staff and assets all from one place.\"",
+      "name": "Elena Ferrán",
+      "role": "Business Owner"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "InstAlert was created to strengthen security in commercial establishments located in medium-high risk areas. Our digital platform combines prevention and rapid reaction, allowing administrators and operational staff to protect themselves and their assets while building a mutual support network in their sector."
+  },
+  "team": {
+    "title": "Our Team",
+    "role": "Developer"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Message or business name",
+    "submit": "Send Message"
+  },
+  "footer": {
+    "copy": "© 2026 InstAlert. Intelligent security network for the commercial sector."
+  }
+}

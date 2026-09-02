@@ -1,0 +1,84 @@
+{
+  "page": {
+    "title": "InstAlert - Seguridad Comercial en tiempo real"
+  },
+  "nav": {
+    "home": "Inicio",
+    "plans": "Planes",
+    "testimonials": "Testimonios",
+    "about": "Nosotros",
+    "team": "Equipo",
+    "login": "Iniciar sesión"
+  },
+  "hero": {
+    "titleBefore": "Protege tu negocio de ",
+    "titleHighlight": "amenazas",
+    "titleAfter": " en tiempo real",
+    "subtitle": "Seguridad inteligente para establecimientos comerciales",
+    "description": "Conecta con comercios vecinos, recibe alertas rápidas y actúa de inmediato para proteger a tu personal y tus bienes.",
+    "cta": "Iniciar Sesión",
+    "imageAlt": "Mapa de riesgo comercial"
+  },
+  "plans": {
+    "title": "Planes para tu Negocio",
+    "basic": {
+      "name": "Básico",
+      "price": "Gratis",
+      "feature1": "Red de alertas entre locales",
+      "feature2": "Reporte rápido de incidentes",
+      "cta": "Elegir"
+    },
+    "standard": {
+      "name": "Intermedio",
+      "price": "S/ 19.90",
+      "feature1": "Todo lo básico",
+      "feature2": "Botón de pánico para personal",
+      "feature3": "Mapa de áreas vulnerables",
+      "cta": "Elegir"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "S/ 39.90",
+      "feature1": "Conexión con autoridades",
+      "feature2": "Integración con cámaras",
+      "cta": "Elegir"
+    }
+  },
+  "testimonials": {
+    "title": "Red Comercial Segura",
+    "subtitle": "Lo que dicen dueños y trabajadores que ya usan InstAlert para proteger sus establecimientos.",
+    "t1": {
+      "text": "\"Como vendedora, tener InstAlert en el mostrador me da mucha tranquilidad. Saber al instante qué ocurre en los locales vecinos nos permite estar prevenidos.\"",
+      "name": "Carla Méndez",
+      "role": "Personal Operativo"
+    },
+    "t2": {
+      "text": "\"El botón de pánico nos salvó de un incidente la semana pasada. La respuesta rápida y la alerta automática al resto del sector comercial fue vital.\"",
+      "name": "Juan Pablo Ruiz",
+      "role": "Administrador de Local"
+    },
+    "t3": {
+      "text": "\"Tengo tres sucursales en zonas de riesgo y la plataforma me permite monitorear la seguridad de mi personal y mis bienes desde un solo lugar.\"",
+      "name": "Elena Ferrán",
+      "role": "Dueña de Negocio"
+    }
+  },
+  "about": {
+    "title": "Nosotros",
+    "description": "InstAlert nace para fortalecer la seguridad en establecimientos comerciales ubicados en zonas de riesgo medio-alto. Nuestra plataforma digital une la prevención y la reacción rápida, permitiendo a administradores y personal operativo proteger su integridad y sus bienes mientras construyen una red de apoyo mutuo en su sector."
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "role": "Developer"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "namePlaceholder": "Tu Nombre",
+    "emailPlaceholder": "Tu Email",
+    "messagePlaceholder": "Mensaje o nombre de tu negocio",
+    "submit": "Enviar Mensaje"
+  },
+  "footer": {
+    "copy": "© 2026 InstAlert. Red de seguridad inteligente para el sector comercial."
+  }
+}
