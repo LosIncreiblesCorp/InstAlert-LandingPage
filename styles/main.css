@@ -447,6 +447,100 @@ p {
 }
 /* REPARTO FIN JOSE | feature/inicio | estilos base | COPIAR HASTA AQUI */
 
+/* REPARTO INICIO SIMON | feature/equipo | estilos base | COPIAR DESDE AQUI */
+.team-section {
+  border-top: 1px solid var(--line);
+}
+.team-section .split-intro {
+  display: block;
+  max-width: 900px;
+  margin-inline: auto;
+}
+.team-section .split-intro > p {
+  max-width: 760px;
+  margin: 20px auto 0;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+.team-member {
+  padding: 24px 18px 20px;
+  text-align: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 24px #0f172a0a;
+}
+.portrait {
+  width: 116px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 4px solid #e6ebf2;
+  border-radius: 50%;
+  background: var(--wash);
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.4s;
+}
+.team-member:hover img {
+  transform: scale(1.035);
+}
+.team-member h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 16px;
+  min-height: 46px;
+}
+.team-member p {
+  font-size: 11px;
+  margin-top: 4px;
+}
+.team-subtitle {
+  margin-top: 35px;
+  font-size: 13px;
+  text-align: center;
+}
+.team-video {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  margin-top: 48px;
+  background: white;
+}
+.video-frame {
+  aspect-ratio: 16 / 9;
+  min-height: 260px;
+}
+.team-video-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px;
+}
+.team-video-copy .eyebrow {
+  margin-bottom: 12px;
+}
+.team-video-copy h3 {
+  max-width: 330px;
+  font-size: 23px;
+  line-height: 1.25;
+}
+.team-video-copy p {
+  max-width: 330px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+/* REPARTO FIN SIMON | feature/equipo | estilos base | COPIAR HASTA AQUI */
+
+@media (min-width: 1600px) {
 /* REPARTO INICIO JOSE | feature/inicio | @media (min-width: 1600px) | COPIAR DESDE AQUI */
   .hero-inner {
     padding-block: 48px 0;
@@ -455,7 +549,9 @@ p {
     font-size: 56px;
   }
   /* REPARTO FIN JOSE | feature/inicio | @media (min-width: 1600px) | COPIAR HASTA AQUI */
+}
 
+@media (max-width: 1150px) {
 /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 1150px) | COPIAR DESDE AQUI */
   .header-inner {
     gap: 20px;
@@ -471,6 +567,17 @@ p {
   }
   /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 1150px) | COPIAR HASTA AQUI */
 
+/* REPARTO INICIO SIMON | feature/equipo | @media (max-width: 1150px) | COPIAR DESDE AQUI */
+.team-grid {
+gap: 14px;
+}
+.team-member {
+padding-inline: 12px;
+}
+/* REPARTO FIN SIMON | feature/equipo | @media (max-width: 1150px) | COPIAR HASTA AQUI */
+}
+
+@media (max-width: 1000px) {
 /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 1000px) | COPIAR DESDE AQUI */
   .hero-inner {
     grid-template-columns: 1fr;
@@ -534,6 +641,14 @@ p {
   }
   /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 1000px) | COPIAR HASTA AQUI */
 
+/* REPARTO INICIO SIMON | feature/equipo | @media (max-width: 1000px) | COPIAR DESDE AQUI */
+.team-member h3 {
+font-size: 14px;
+}
+/* REPARTO FIN SIMON | feature/equipo | @media (max-width: 1000px) | COPIAR HASTA AQUI */
+}
+
+@media (max-width: 760px) {
 /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 760px) | COPIAR DESDE AQUI */
   .container {
     width: calc(100% - 40px);
@@ -618,6 +733,18 @@ p {
   }
   /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 760px) | COPIAR HASTA AQUI */
 
+/* REPARTO INICIO SIMON | feature/equipo | @media (max-width: 760px) | COPIAR DESDE AQUI */
+.team-grid {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 28px 16px;
+}
+.team-member h3 {
+font-size: 15px;
+}
+/* REPARTO FIN SIMON | feature/equipo | @media (max-width: 760px) | COPIAR HASTA AQUI */
+}
+
+@media (max-width: 480px) {
 /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 480px) | COPIAR DESDE AQUI */
   .container {
     width: calc(100% - 32px);
@@ -718,6 +845,22 @@ p {
   }
   /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 480px) | COPIAR HASTA AQUI */
 
+/* REPARTO INICIO SIMON | feature/equipo | @media (max-width: 480px) | COPIAR DESDE AQUI */
+.team-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 26px 14px;
+}
+.team-member h3 {
+font-size: 14px;
+}
+.team-subtitle {
+text-align: left;
+font-size: 12px;
+}
+/* REPARTO FIN SIMON | feature/equipo | @media (max-width: 480px) | COPIAR HASTA AQUI */
+}
+
+@media (max-width: 380px) {
 /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 380px) | COPIAR DESDE AQUI */
   .brand small {
     display: none;
@@ -751,6 +894,7 @@ p {
     font-size: 9px;
   }
   /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 380px) | COPIAR HASTA AQUI */
+}
 
 /* REPARTO INICIO JOSE | feature/inicio | estilos base | COPIAR DESDE AQUI */
 @media (prefers-reduced-motion: reduce) {
@@ -765,3 +909,4 @@ p {
   }
 }
 /* REPARTO FIN JOSE | feature/inicio | estilos base | COPIAR HASTA AQUI */
+  
