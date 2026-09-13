@@ -117,6 +117,25 @@ document.querySelectorAll("[data-auth]").forEach((button) => {
 });
 /* REPARTO FIN JOSE | feature/inicio | accesos a la aplicacion | COPIAR HASTA AQUI */
 
+
+/* REPARTO INICIO VICTOR | feature/producto | copiar URL de videos; compartido con SIMON | COPIAR DESDE AQUI */
+document.querySelectorAll("[data-video-action]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(siteConfig.videoPlaceholderUrl);
+      button.querySelector("span").textContent =
+        currentLanguage === "es" ? "URL copiada" : "URL copied";
+    } catch {
+      window.prompt(
+        currentLanguage === "es" ? "Copia esta URL:" : "Copy this URL:",
+        siteConfig.videoPlaceholderUrl,
+      );
+    }
+  });
+});
+/* REPARTO FIN VICTOR | feature/producto | copiar URL de videos; compartido con SIMON | COPIAR HASTA AQUI */
+
+
 /* REPARTO INICIO JOSE | feature/inicio | inicializacion final; conservar al final | COPIAR DESDE AQUI */
 lucide.createIcons();
 setLanguage(currentLanguage);
