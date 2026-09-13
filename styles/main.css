@@ -844,3 +844,31 @@ p {
   color: var(--muted);
 }
 /* REPARTO FIN YNGRID | feature/cierre | estilos base */
+
+/* REPARTO INICIO YNGRID | feature/cierre | @media (max-width: 760px)  */
+  .final-cta {
+    padding-block: 54px;
+  }
+  .final-cta h2 {
+    font-size: 32px;
+  }
+  .footer-top {
+    flex-wrap: wrap;
+    padding-block: 30px;
+    gap: 25px;
+  }
+  .footer-top nav {
+    order: 3;
+    width: 100%;
+    gap: 24px;
+  }
+  .footer-columns {
+    order: 3;
+    width: 100%;
+    gap: 35px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+  }
+  /* REPARTO FIN YNGRID | feature/cierre | @media (max-width: 760px)  */
