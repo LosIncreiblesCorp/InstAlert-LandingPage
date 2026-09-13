@@ -873,6 +873,7 @@ p {
   }
   /* REPARTO FIN YNGRID | feature/cierre | @media (max-width: 760px)  */
 }
+@media (max-width: 480px) {
 /* REPARTO INICIO YNGRID | feature/cierre | @media (max-width: 480px)  */
   .final-cta h2 {
     font-size: 29px;
@@ -884,3 +885,5 @@ p {
     gap: 20px;
   }
   /* REPARTO FIN YNGRID | feature/cierre | @media (max-width: 480px) */
+  
+  }
