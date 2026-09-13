@@ -844,7 +844,7 @@ p {
   color: var(--muted);
 }
 /* REPARTO FIN YNGRID | feature/cierre | estilos base */
-
+@media (max-width: 760px) {
 /* REPARTO INICIO YNGRID | feature/cierre | @media (max-width: 760px)  */
   .final-cta {
     padding-block: 54px;
@@ -872,6 +872,7 @@ p {
     gap: 5px;
   }
   /* REPARTO FIN YNGRID | feature/cierre | @media (max-width: 760px)  */
+}
 /* REPARTO INICIO YNGRID | feature/cierre | @media (max-width: 480px)  */
   .final-cta h2 {
     font-size: 29px;
