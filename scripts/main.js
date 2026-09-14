@@ -3,7 +3,12 @@ const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector(".nav-toggle");
 const languageToggle = document.querySelector(".language-toggle");
 /* REPARTO FIN JOSE | feature/inicio | referencias de navegacion e idioma | COPIAR HASTA AQUI */
-
+/* REPARTO INICIO JEAN | feature/planes | estado y referencias de precios | COPIAR DESDE AQUI */
+const pricingButtons = document.querySelectorAll("[data-currency]");
+const prices = document.querySelectorAll(".price[data-plan]");
+const currencySymbols = { pen: "S/", usd: "$" };
+let currentCurrency = "pen";
+/* REPARTO FIN JEAN | feature/planes | estado y referencias de precios | COPIAR HASTA AQUI */
 /* REPARTO INICIO JOSE | feature/inicio | preferencia de idioma y traducciones compartidas | COPIAR DESDE AQUI */
 let currentLanguage = siteConfig.defaultLanguage;
 try {
@@ -31,7 +36,40 @@ const translatedTitles = [...document.querySelectorAll("[data-es-title]")].map(
 );
 
 /* REPARTO FIN JOSE | feature/inicio | preferencia de idioma y traducciones compartidas | COPIAR HASTA AQUI */
+/* REPARTO INICIO JEAN | feature/planes | renderizado de precios PEN y USD | COPIAR DESDE AQUI */
+function renderPricing(currency = currentCurrency) {
+  if (!Object.hasOwn(currencySymbols, currency)) return;
+  currentCurrency = currency;
+  pricingButtons.forEach((button) => {
+    const selected = button.dataset.currency === currency;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+  prices.forEach((price) => {
+    const amount = pricing[price.dataset.plan]?.[currency];
+    const hasPrice = Number.isFinite(amount) && amount >= 0.01;
+    const formatted = hasPrice
+      ? amount.toLocaleString(currentLanguage === "es" ? "es-PE" : "en-US", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })
+      : currentLanguage === "es"
+        ? "Por definir"
+        : "TBD";
+    price.querySelector("strong").textContent =
+      `${currencySymbols[currency]} ${formatted}`;
+    price.querySelector("span").textContent =
+      currentLanguage === "es"
+        ? hasPrice
+          ? "/ mes"
+          : "/ mes (precio pendiente de aprobación)"
+        : hasPrice
+          ? "/ month"
+          : "/ month (price pending approval)";
+  });
+}
 
+/* REPARTO FIN JEAN | feature/planes | renderizado de precios PEN y USD | COPIAR HASTA AQUI */
 /* REPARTO INICIO JOSE | feature/inicio | idioma global e integracion con planes | COPIAR DESDE AQUI */
 function setLanguage(language) {
   currentLanguage = language;
@@ -106,7 +144,13 @@ languageToggle.addEventListener("click", () =>
   setLanguage(currentLanguage === "es" ? "en" : "es"),
 );
 /* REPARTO FIN JOSE | feature/inicio | idioma global e integracion con planes | COPIAR HASTA AQUI */
-
+/* REPARTO INICIO JEAN | feature/planes | eventos del selector de moneda | COPIAR DESDE AQUI */
+pricingButtons.forEach((button) =>
+  button.addEventListener("click", () =>
+    renderPricing(button.dataset.currency),
+  ),
+);
+/* REPARTO FIN JEAN | feature/planes | eventos del selector de moneda | COPIAR HASTA AQUI */
 /* REPARTO INICIO JOSE | feature/inicio | accesos a la aplicacion | COPIAR DESDE AQUI */
 document.querySelectorAll("[data-auth]").forEach((button) => {
   const destination = siteConfig.auth[button.dataset.auth];
@@ -116,57 +160,22 @@ document.querySelectorAll("[data-auth]").forEach((button) => {
   });
 });
 /* REPARTO FIN JOSE | feature/inicio | accesos a la aplicacion | COPIAR HASTA AQUI */
-
-/* REPARTO INICIO JEAN | feature/planes | estado y referencias de precios | COPIAR DESDE AQUI */
-const pricingButtons = document.querySelectorAll("[data-currency]");
-const prices = document.querySelectorAll(".price[data-plan]");
-const currencySymbols = { pen: "S/", usd: "$" };
-let currentCurrency = "pen";
-/* REPARTO FIN JEAN | feature/planes | estado y referencias de precios | COPIAR HASTA AQUI */
-
-/* REPARTO INICIO JEAN | feature/planes | renderizado de precios PEN y USD | COPIAR DESDE AQUI */
-function renderPricing(currency = currentCurrency) {
-  if (!Object.hasOwn(currencySymbols, currency)) return;
-  currentCurrency = currency;
-  pricingButtons.forEach((button) => {
-    const selected = button.dataset.currency === currency;
-    button.classList.toggle("active", selected);
-    button.setAttribute("aria-pressed", String(selected));
+/* REPARTO INICIO VICTOR | feature/producto | copiar URL de videos; compartido con SIMON | COPIAR DESDE AQUI */
+document.querySelectorAll("[data-video-action]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(siteConfig.videoPlaceholderUrl);
+      button.querySelector("span").textContent =
+        currentLanguage === "es" ? "URL copiada" : "URL copied";
+    } catch {
+      window.prompt(
+        currentLanguage === "es" ? "Copia esta URL:" : "Copy this URL:",
+        siteConfig.videoPlaceholderUrl,
+      );
+    }
   });
-  prices.forEach((price) => {
-    const amount = pricing[price.dataset.plan]?.[currency];
-    const hasPrice = Number.isFinite(amount) && amount >= 0.01;
-    const formatted = hasPrice
-      ? amount.toLocaleString(currentLanguage === "es" ? "es-PE" : "en-US", {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
-        })
-      : currentLanguage === "es"
-        ? "Por definir"
-        : "TBD";
-    price.querySelector("strong").textContent =
-      `${currencySymbols[currency]} ${formatted}`;
-    price.querySelector("span").textContent =
-      currentLanguage === "es"
-        ? hasPrice
-          ? "/ mes"
-          : "/ mes (precio pendiente de aprobación)"
-        : hasPrice
-          ? "/ month"
-          : "/ month (price pending approval)";
-  });
-}
-
-/* REPARTO FIN JEAN | feature/planes | renderizado de precios PEN y USD | COPIAR HASTA AQUI */
-
-/* REPARTO INICIO JEAN | feature/planes | eventos del selector de moneda | COPIAR DESDE AQUI */
-pricingButtons.forEach((button) =>
-  button.addEventListener("click", () =>
-    renderPricing(button.dataset.currency),
-  ),
-);
-/* REPARTO FIN JEAN | feature/planes | eventos del selector de moneda | COPIAR HASTA AQUI */
-
+});
+/* REPARTO FIN VICTOR | feature/producto | copiar URL de videos; compartido con SIMON | COPIAR HASTA AQUI */
 /* REPARTO INICIO JOSE | feature/inicio | inicializacion final; conservar al final | COPIAR DESDE AQUI */
 lucide.createIcons();
 setLanguage(currentLanguage);
