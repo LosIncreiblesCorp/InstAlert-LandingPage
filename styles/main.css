@@ -1646,3 +1646,125 @@ p {
   }
 }
 /* REPARTO FIN JOSE | feature/inicio | estilos base | COPIAR HASTA AQUI */
+
+/* REPARTO INICIO YNGRID | feature/cierre | estilos base  */
+.final-cta {
+  background: var(--navy);
+  color: white;
+  padding-block: 70px;
+  border-bottom: 3px solid var(--blue);
+}
+.final-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.final-cta img {
+  margin-bottom: 20px;
+  width: 64px;
+  height: 64px;
+}
+.final-cta .eyebrow {
+  color: #b9cdfc;
+}
+.final-cta h2 {
+  max-width: 760px;
+  font-size: 40px;
+}
+.final-cta p {
+  max-width: 590px;
+  color: #b9c3d5;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.final-cta .btn {
+  margin-top: 28px;
+}
+.site-footer {
+  background: white;
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-block: 38px;
+}
+.footer-columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.footer-column {
+  display: grid;
+  gap: 7px;
+  min-width: 125px;
+}
+.footer-column h3 {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 750;
+}
+.footer-column a {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+.footer-column a:hover {
+  color: var(--blue);
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 19px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  color: var(--muted);
+}
+/* REPARTO FIN YNGRID | feature/cierre | estilos base */
+@media (max-width: 760px) {
+/* REPARTO INICIO YNGRID | feature/cierre | @media (max-width: 760px)  */
+  .final-cta {
+    padding-block: 54px;
+  }
+  .final-cta h2 {
+    font-size: 32px;
+  }
+  .footer-top {
+    flex-wrap: wrap;
+    padding-block: 30px;
+    gap: 25px;
+  }
+  .footer-top nav {
+    order: 3;
+    width: 100%;
+    gap: 24px;
+  }
+  .footer-columns {
+    order: 3;
+    width: 100%;
+    gap: 35px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+  }
+  /* REPARTO FIN YNGRID | feature/cierre | @media (max-width: 760px)  */
+}
+@media (max-width: 480px) {
+/* REPARTO INICIO YNGRID | feature/cierre | @media (max-width: 480px)  */
+  .final-cta h2 {
+    font-size: 29px;
+  }
+  .final-cta p {
+    font-size: 13px;
+  }
+  .footer-top nav {
+    gap: 20px;
+  }
+  /* REPARTO FIN YNGRID | feature/cierre | @media (max-width: 480px) */
+  
+  }
