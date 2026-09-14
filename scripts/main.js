@@ -138,8 +138,8 @@ function renderPricing(currency = currentCurrency) {
     const hasPrice = Number.isFinite(amount) && amount >= 0.01;
     const formatted = hasPrice
       ? amount.toLocaleString(currentLanguage === "es" ? "es-PE" : "en-US", {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
         })
       : currentLanguage === "es"
         ? "Por definir"

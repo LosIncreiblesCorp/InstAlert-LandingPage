@@ -1,17 +1,17 @@
 /* REPARTO INICIO JEAN | feature/planes | archivo completo: importes de suscripcion | COPIAR DESDE AQUI */
-// Set approved monthly amounts independently for each currency. Null means pending approval.
+// Approved monthly amounts. USD values are displayed as whole dollars.
 const pricing = {
   essential: {
-    pen: null,
-    usd: null,
+    pen: 50,
+    usd: 15,
   },
   professional: {
-    pen: null,
-    usd: null,
+    pen: 100,
+    usd: 30,
   },
   business: {
-    pen: null,
-    usd: null,
+    pen: 150,
+    usd: 45,
   },
 };
 /* REPARTO FIN JEAN | feature/planes | archivo completo: importes de suscripcion | COPIAR HASTA AQUI */
