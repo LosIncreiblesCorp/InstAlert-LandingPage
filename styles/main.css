@@ -1083,6 +1083,60 @@ p {
   background: #e0e9ff;
 }
 /* REPARTO FIN VICTOR | feature/producto | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO JOSE | feature/testimonios | cards de testimonios | COPIAR DESDE AQUI */
+.testimonials-section {
+  background: var(--wash);
+  border-block: 1px solid var(--line);
+}
+.testimonials-section .section-intro {
+  max-width: 780px;
+  margin-inline: auto;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 16px 36px #0f172a0b;
+}
+.featured-testimonial {
+  border-color: #b9cdfc;
+  box-shadow: 0 18px 40px #315ed01c;
+}
+.quote-mark {
+  color: var(--blue);
+  font-family: Georgia, serif;
+  font-size: 52px;
+  line-height: 0.7;
+}
+.testimonial-card blockquote {
+  margin: 22px 0 30px;
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.testimonial-card footer {
+  display: grid;
+  gap: 5px;
+  margin-top: auto;
+}
+.testimonial-card footer strong {
+  font-size: 13px;
+}
+.testimonial-card footer span {
+  color: var(--muted);
+  font-size: 12px;
+}
+/* REPARTO FIN JOSE | feature/testimonios | cards de testimonios | COPIAR HASTA AQUI */
 /* REPARTO INICIO YNGRID | feature/cierre | estilos base | COPIAR DESDE AQUI */
 .final-cta {
   background: var(--navy);
@@ -1395,6 +1449,13 @@ p {
   .section-intro {
     margin-bottom: 32px;
   }
+  /* REPARTO INICIO JOSE | feature/testimonios | @media (max-width: 760px) | COPIAR DESDE AQUI */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  /* REPARTO FIN JOSE | feature/testimonios | @media (max-width: 760px) | COPIAR HASTA AQUI */
   /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 760px) | COPIAR HASTA AQUI */
   /* REPARTO INICIO VICTOR | feature/producto | @media (max-width: 760px) | COPIAR DESDE AQUI */
   .principles-grid {
