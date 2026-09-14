@@ -1137,6 +1137,63 @@ p {
   font-size: 12px;
 }
 /* REPARTO FIN JOSE | feature/testimonios | cards de testimonios | COPIAR HASTA AQUI */
+/* REPARTO INICIO JOSE | feature/faq | acordeon de preguntas frecuentes | COPIAR DESDE AQUI */
+.faq-section {
+  max-width: 820px;
+  margin: 76px auto 0;
+  padding-top: 70px;
+  border-top: 1px solid var(--line);
+}
+.faq-section .section-intro {
+  margin-bottom: 30px;
+}
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+.faq-list details {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: white;
+}
+.faq-list details[open] {
+  border-color: #b9cdfc;
+  box-shadow: 0 12px 28px #0f172a0a;
+}
+.faq-list summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 650;
+  list-style: none;
+}
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+.faq-list summary::after {
+  content: "+";
+  color: var(--blue);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+.faq-list details[open] summary::after {
+  content: "−";
+}
+.faq-list details p {
+  max-width: 680px;
+  margin: -2px 24px 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+/* REPARTO FIN JOSE | feature/faq | acordeon de preguntas frecuentes | COPIAR HASTA AQUI */
 /* REPARTO INICIO YNGRID | feature/cierre | estilos base | COPIAR DESDE AQUI */
 .final-cta {
   background: var(--navy);
