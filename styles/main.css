@@ -1,0 +1,1804 @@
+/* REPARTO INICIO JOSE | feature/inicio | estilos base | COPIAR DESDE AQUI */
+:root {
+  --navy: #0f172a;
+  --blue: #2563eb;
+  --red: #dc2626;
+  --white: #fff;
+  --muted: #596477;
+  --line: #e2e7ef;
+  --wash: #f5f7fb;
+  --soft-blue: #eef3ff;
+  --container: 1200px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  margin: 0;
+  color: var(--navy);
+  background: var(--white);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+svg.lucide {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  stroke-width: 1.7;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 19px;
+  font-weight: 650;
+}
+p {
+  color: var(--muted);
+}
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 5px;
+}
+.container {
+  width: min(var(--container), calc(100% - 96px));
+  margin-inline: auto;
+}
+.section {
+  padding-block: 100px;
+}
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.6;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.eyebrow.light {
+  color: var(--white);
+}
+.skip-link {
+  position: fixed;
+  top: -80px;
+  left: 20px;
+  z-index: 100;
+  padding: 10px 18px;
+  background: white;
+}
+.skip-link:focus {
+  top: 8px;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-height: 84px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.brand > span {
+  font-size: 25px;
+  font-weight: 750;
+  line-height: 1.1;
+}
+.brand-accent {
+  color: var(--blue);
+}
+.brand small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 500;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+}
+.site-nav a {
+  position: relative;
+  padding-block: 14px;
+}
+.site-nav a:hover {
+  color: var(--blue);
+}
+.site-nav a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background: var(--blue);
+  transition: width 0.2s;
+}
+.site-nav a:hover:after {
+  width: 100%;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header-actions button {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 0;
+  padding: 10px 2px;
+  color: var(--navy);
+}
+.language-toggle svg {
+  width: 19px;
+  height: 19px;
+}
+.language-label {
+  font-weight: 700;
+  min-width: 20px;
+}
+.header-divider {
+  height: 20px;
+  width: 1px;
+  background: var(--line);
+}
+.auth-button {
+  border: 0;
+  background: none;
+  padding: 10px 0;
+  color: var(--navy);
+  font-weight: 650;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 50px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 12px 23px;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.35;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+.btn.primary {
+  background: var(--blue);
+  color: var(--white);
+}
+.btn.primary:hover:not(:disabled) {
+  background: #1d4ed8;
+  box-shadow: 0 6px 18px #2563eb26;
+}
+.btn.glass {
+  color: var(--white);
+  background: #ffffff08;
+  border-color: #ffffff60;
+}
+.btn.glass:hover {
+  background: #ffffff15;
+}
+.btn.outline {
+  border-color: var(--line);
+  background: var(--white);
+}
+.btn.outline:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.header-actions .btn {
+  min-height: 40px;
+  padding: 9px 16px;
+}
+.full {
+  width: 100%;
+}
+.icon-button {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 5px;
+}
+.nav-toggle {
+  display: none;
+}
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--navy);
+}
+.hero-photo,
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.hero-photo {
+  object-position: center;
+}
+.hero-shade {
+  display: none;
+  background: rgba(15, 23, 42, 0.1);
+  z-index: -1;
+}
+.hero-inner {
+  padding-block: 32px 0;
+  text-align: left;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+.hero-copy {
+  min-width: 0;
+  padding-block: 20px 44px;
+}
+.hero-product {
+  align-self: end;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 575px;
+}
+.hero-hand {
+  display: none;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  object-fit: contain;
+  object-position: bottom;
+}
+.hero .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e4ebfc;
+  margin-bottom: 20px;
+}
+.accent-line {
+  width: 25px;
+  height: 2px;
+  background: var(--red);
+  flex-shrink: 0;
+}
+.hero h1 {
+  max-width: 640px;
+  font-size: 52px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.12;
+}
+.hero-heading-secondary {
+  display: block;
+  color: #d8e4ff;
+}
+.hero-description {
+  max-width: 740px;
+  margin-top: 24px;
+  color: #e1e6ef;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.hero-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 30px;
+}
+.hero-footnote {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 42px;
+  font-size: 11px;
+  color: #d3d9e5;
+}
+.mini-line {
+  height: 1px;
+  width: 24px;
+  background: #94a3b8;
+}
+.benefit-band {
+  border-bottom: 1px solid var(--line);
+  background: white;
+}
+.benefit-list {
+  padding-block: 24px;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.benefit-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.benefit-list li + li {
+  border-left: 1px solid var(--line);
+}
+.benefit-list svg {
+  color: var(--blue);
+  width: 21px;
+  height: 21px;
+}
+.section-intro {
+  margin-bottom: 46px;
+  text-align: center;
+}
+.split-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: end;
+  text-align: center;
+}
+.split-intro h2 {
+  max-width: 530px;
+}
+.split-intro > p {
+  font-size: 14px;
+  line-height: 1.9;
+  padding-bottom: 3px;
+}
+/* REPARTO FIN JOSE | feature/inicio | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO VICTOR | feature/producto | estilos base | COPIAR DESDE AQUI */
+.about-intro {
+  max-width: 900px;
+  margin-inline: auto;
+}
+.about-intro > p {
+  max-width: 780px;
+  margin: 20px auto 0;
+  padding-bottom: 0;
+}
+/* REPARTO FIN VICTOR | feature/producto | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO JOSE | feature/inicio | estilos base | COPIAR DESDE AQUI */
+.centered h2,
+.section-intro h2 {
+  max-width: 780px;
+  margin-inline: auto;
+}
+/* REPARTO FIN JOSE | feature/inicio | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO VICTOR | feature/producto | estilos base | COPIAR DESDE AQUI */
+.product-section {
+  background: var(--wash);
+  border-block: 1px solid var(--line);
+}
+.product-video,
+.team-video {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #cfd8e6;
+  border-radius: 8px;
+  background: var(--navy);
+  box-shadow: 0 22px 48px #0f172a12;
+}
+.product-video {
+  max-width: 920px;
+  aspect-ratio: 16 / 9;
+  margin-inline: auto;
+}
+.product-video iframe,
+.video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 8px;
+  padding: 28px 30px 26px;
+  color: white;
+  background: linear-gradient(transparent, #0f172ae8 35%);
+  pointer-events: none;
+}
+.video-kicker {
+  color: #b9cdfc;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+.video-overlay strong {
+  max-width: 530px;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+.video-edit {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  margin-top: 5px;
+  padding: 7px 11px;
+  color: white;
+  background: #ffffff1a;
+  border: 1px solid #ffffff55;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 650;
+  pointer-events: auto;
+}
+.video-edit:hover {
+  background: #ffffff2b;
+}
+.video-edit svg {
+  width: 15px;
+  height: 15px;
+}
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+}
+.principles-grid article {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.principle-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.principle-top svg {
+  width: 29px;
+  height: 29px;
+  color: var(--blue);
+}
+.principles-grid article:nth-child(2) svg {
+  color: var(--red);
+}
+.principle-top span {
+  font-size: 11px;
+  color: #8c96a5;
+}
+.principles-grid h3 {
+  font-size: 18px;
+  min-height: 44px;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+.principles-grid p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.platform-section {
+  background: var(--wash);
+  border-block: 1px solid var(--line);
+}
+.platform-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 90px;
+}
+.platform-copy > p {
+  margin-top: 22px;
+  font-size: 15px;
+}
+.how-it-works {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.how-it-works > h3 {
+  margin-bottom: 18px;
+  color: var(--navy);
+  font-size: 17px;
+}
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 18px;
+}
+.how-it-works-grid article {
+  display: flex;
+  gap: 11px;
+}
+.how-it-works-grid article > span {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+.how-it-works-grid h4 {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+.how-it-works-grid p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.platform-copy > .eyebrow,
+.platform-copy > h2,
+.platform-copy > p {
+  text-align: center;
+}
+.solution-list {
+  display: grid;
+  gap: 24px;
+  margin-top: 30px;
+}
+.solution-list article {
+  display: flex;
+  gap: 16px;
+}
+.solution-list svg {
+  color: var(--blue);
+  margin-top: 2px;
+  width: 23px;
+  height: 23px;
+}
+.solution-list h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.solution-list p {
+  font-size: 13px;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.text-link:hover {
+  gap: 18px;
+}
+.network-preview {
+  border: 1px solid #d2dbea;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 24px 45px #0f172a0c;
+}
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 20px;
+  border-bottom: 1px solid var(--line);
+  gap: 12px;
+}
+.preview-header > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.preview-label {
+  font-size: 8px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: right;
+}
+.map-scene {
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  background: #eff2f7;
+}
+.map-block {
+  position: absolute;
+  background: #dfe6f0;
+  border: 2px solid #d7dfeb;
+  border-radius: 5px;
+}
+.b1 {
+  left: -3%;
+  top: 8%;
+  width: 27%;
+  height: 32%;
+  transform: rotate(-12deg);
+}
+.b2 {
+  left: 32%;
+  top: -7%;
+  width: 25%;
+  height: 32%;
+  transform: rotate(-12deg);
+}
+.b3 {
+  right: -5%;
+  top: 9%;
+  width: 30%;
+  height: 34%;
+  transform: rotate(-12deg);
+}
+.b4 {
+  left: 0;
+  bottom: 4%;
+  width: 28%;
+  height: 34%;
+  transform: rotate(-12deg);
+}
+.b5 {
+  left: 39%;
+  bottom: -10%;
+  width: 27%;
+  height: 37%;
+  transform: rotate(-12deg);
+}
+.b6 {
+  right: -10%;
+  bottom: 4%;
+  width: 28%;
+  height: 38%;
+  transform: rotate(-12deg);
+}
+.map-road {
+  position: absolute;
+  background: white;
+  border: 1px solid #d6deea;
+}
+.road-one {
+  left: 26%;
+  width: 28px;
+  height: 140%;
+  top: -20%;
+  transform: rotate(13deg);
+}
+.road-two {
+  top: 40%;
+  left: -10%;
+  width: 120%;
+  height: 35px;
+  transform: rotate(-12deg);
+}
+.network-line {
+  position: absolute;
+  height: 2px;
+  transform-origin: left;
+  background: var(--blue);
+  opacity: 0.45;
+}
+.line-one {
+  width: 41%;
+  top: 36%;
+  left: 25%;
+  transform: rotate(24deg);
+}
+.line-two {
+  width: 32%;
+  top: 40%;
+  left: 67%;
+  transform: rotate(105deg);
+}
+.map-marker {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 4px solid white;
+  background: var(--blue);
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px #0f172a20;
+}
+.marker-one {
+  left: 19%;
+  top: 27%;
+}
+.marker-two {
+  left: 64%;
+  top: 34%;
+}
+.marker-three {
+  left: 48%;
+  top: 71%;
+}
+.map-marker svg {
+  width: 19px;
+  height: 19px;
+}
+.map-alert {
+  position: absolute;
+  left: 44%;
+  top: 44%;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: var(--red);
+  border: 4px solid white;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px #dc262612;
+}
+.map-alert svg {
+  width: 21px;
+  height: 21px;
+}
+.map-street {
+  position: absolute;
+  font-size: 10px;
+  color: #7d879a;
+}
+.street-one {
+  left: 7%;
+  top: 48%;
+  transform: rotate(-12deg);
+}
+.street-two {
+  right: 7%;
+  top: 58%;
+  transform: rotate(-12deg);
+}
+.preview-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 21px;
+}
+.alert-icon {
+  display: grid;
+  place-items: center;
+  background: var(--soft-blue);
+  color: var(--blue);
+  width: 40px;
+  height: 44px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+.preview-bottom strong {
+  font-size: 13px;
+}
+.preview-bottom p {
+  font-size: 11px;
+  margin-top: 3px;
+}
+/* REPARTO FIN VICTOR | feature/producto | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO JOSE | feature/inicio | estilos base | COPIAR DESDE AQUI */
+.centered {
+  text-align: center;
+  max-width: 780px;
+  margin-inline: auto;
+}
+.centered p {
+  margin-top: 18px;
+  font-size: 15px;
+}
+/* REPARTO FIN JOSE | feature/inicio | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO JEAN | feature/planes | estilos base | COPIAR DESDE AQUI */
+.pricing-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+.pricing-controls > span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.segmented-control {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  padding: 4px;
+  border-radius: 6px;
+  gap: 4px;
+}
+.segmented-control button {
+  border: 0;
+  background: transparent;
+  min-width: 62px;
+  min-height: 34px;
+  font-size: 12px;
+  font-weight: 650;
+  border-radius: 3px;
+  color: var(--muted);
+}
+.segmented-control .active {
+  background: var(--navy);
+  color: white;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.price-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  position: relative;
+}
+.price-card.featured {
+  border: 2px solid var(--blue);
+  padding: 29px;
+  background: #f9fbff;
+}
+.plan-number {
+  font-size: 9px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+.featured .plan-number {
+  color: var(--blue);
+}
+.price-card h3 {
+  font-size: 24px;
+}
+.plan-description {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 14px;
+  min-height: 66px;
+}
+.price {
+  margin-top: 26px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+  min-height: 115px;
+}
+.price strong {
+  display: block;
+  font-size: 36px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.price span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+  min-height: 34px;
+}
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 30px;
+  display: grid;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.price-card li {
+  padding-left: 20px;
+  position: relative;
+}
+.price-card li:before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 6px;
+  width: 8px;
+  height: 5px;
+  border-bottom: 1.5px solid var(--blue);
+  border-left: 1.5px solid var(--blue);
+  transform: rotate(-45deg);
+}
+.price-card .btn {
+  margin-top: auto;
+  font-size: 13px;
+  justify-content: space-between;
+  padding-inline: 18px;
+}
+.price-card .btn svg {
+  width: 18px;
+  height: 18px;
+}
+/* REPARTO FIN JEAN | feature/planes | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO SIMON | feature/equipo | estilos base | COPIAR DESDE AQUI */
+.team-section {
+  border-top: 1px solid var(--line);
+}
+.team-section .split-intro {
+  display: block;
+  max-width: 900px;
+  margin-inline: auto;
+}
+.team-section .split-intro > p {
+  max-width: 760px;
+  margin: 20px auto 0;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+.team-member {
+  padding: 24px 18px 20px;
+  text-align: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 24px #0f172a0a;
+}
+.portrait {
+  width: 116px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 4px solid #e6ebf2;
+  border-radius: 50%;
+  background: var(--wash);
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.4s;
+}
+.team-member:hover img {
+  transform: scale(1.035);
+}
+.team-member h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 16px;
+  min-height: 46px;
+}
+.team-member p {
+  font-size: 11px;
+  margin-top: 4px;
+}
+.team-subtitle {
+  margin-top: 35px;
+  font-size: 13px;
+  text-align: center;
+}
+.team-video {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  margin-top: 48px;
+  background: white;
+}
+.video-frame {
+  aspect-ratio: 16 / 9;
+  min-height: 260px;
+}
+.team-video-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px;
+}
+.team-video-copy .eyebrow {
+  margin-bottom: 12px;
+}
+.team-video-copy h3 {
+  max-width: 330px;
+  font-size: 23px;
+  line-height: 1.25;
+}
+.team-video-copy p {
+  max-width: 330px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+/* REPARTO FIN SIMON | feature/equipo | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO VICTOR | feature/producto | estilos base | COPIAR DESDE AQUI */
+.team-video-copy .video-edit {
+  margin-top: 22px;
+  color: var(--navy);
+  background: var(--soft-blue);
+  border-color: #c8d7fb;
+}
+.team-video-copy .video-edit:hover {
+  background: #e0e9ff;
+}
+/* REPARTO FIN VICTOR | feature/producto | estilos base | COPIAR HASTA AQUI */
+/* REPARTO INICIO JOSE | feature/testimonios | cards de testimonios | COPIAR DESDE AQUI */
+.testimonials-section {
+  background: var(--wash);
+  border-block: 1px solid var(--line);
+}
+.testimonials-section .section-intro {
+  max-width: 780px;
+  margin-inline: auto;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 16px 36px #0f172a0b;
+}
+.featured-testimonial {
+  border-color: #b9cdfc;
+  box-shadow: 0 18px 40px #315ed01c;
+}
+.quote-mark {
+  color: var(--blue);
+  font-family: Georgia, serif;
+  font-size: 52px;
+  line-height: 0.7;
+}
+.testimonial-card blockquote {
+  margin: 22px 0 30px;
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.testimonial-card footer {
+  display: grid;
+  gap: 5px;
+  margin-top: auto;
+}
+.testimonial-card footer strong {
+  font-size: 13px;
+}
+.testimonial-card footer span {
+  color: var(--muted);
+  font-size: 12px;
+}
+/* REPARTO FIN JOSE | feature/testimonios | cards de testimonios | COPIAR HASTA AQUI */
+/* REPARTO INICIO JOSE | feature/faq | acordeon de preguntas frecuentes | COPIAR DESDE AQUI */
+.faq-section {
+  max-width: 820px;
+  margin: 76px auto 0;
+  padding-top: 70px;
+  border-top: 1px solid var(--line);
+}
+.faq-section .section-intro {
+  margin-bottom: 30px;
+}
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+.faq-list details {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: white;
+}
+.faq-list details[open] {
+  border-color: #b9cdfc;
+  box-shadow: 0 12px 28px #0f172a0a;
+}
+.faq-list summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 650;
+  list-style: none;
+}
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+.faq-list summary::after {
+  content: "+";
+  color: var(--blue);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+.faq-list details[open] summary::after {
+  content: "−";
+}
+.faq-list details p {
+  max-width: 680px;
+  margin: -2px 24px 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+/* REPARTO FIN JOSE | feature/faq | acordeon de preguntas frecuentes | COPIAR HASTA AQUI */
+/* REPARTO INICIO YNGRID | feature/cierre | estilos base | COPIAR DESDE AQUI */
+.final-cta {
+  background: var(--navy);
+  color: white;
+  padding-block: 70px;
+  border-bottom: 3px solid var(--blue);
+}
+.final-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.final-cta img {
+  margin-bottom: 20px;
+  width: 64px;
+  height: 64px;
+}
+.final-cta .eyebrow {
+  color: #b9cdfc;
+}
+.final-cta h2 {
+  max-width: 760px;
+  font-size: 40px;
+}
+.final-cta p {
+  max-width: 590px;
+  color: #b9c3d5;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.final-cta .btn {
+  margin-top: 28px;
+}
+.site-footer {
+  background: white;
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-block: 38px;
+}
+.footer-columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.footer-column {
+  display: grid;
+  gap: 7px;
+  min-width: 125px;
+}
+.footer-column h3 {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 750;
+}
+.footer-column a {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+.footer-column a:hover {
+  color: var(--blue);
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 19px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  color: var(--muted);
+}
+/* REPARTO FIN YNGRID | feature/cierre | estilos base | COPIAR HASTA AQUI */
+@media (min-width: 1600px) {
+  /* REPARTO INICIO JOSE | feature/inicio | @media (min-width: 1600px) | COPIAR DESDE AQUI */
+  .hero-inner {
+    padding-block: 48px 0;
+  }
+  .hero h1 {
+    font-size: 56px;
+  }
+  /* REPARTO FIN JOSE | feature/inicio | @media (min-width: 1600px) | COPIAR HASTA AQUI */
+}
+@media (max-width: 1150px) {
+  /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 1150px) | COPIAR DESDE AQUI */
+  .header-inner {
+    gap: 20px;
+  }
+  .site-nav {
+    gap: 17px;
+  }
+  .header-actions {
+    gap: 10px;
+  }
+  .container {
+    width: calc(100% - 64px);
+  }
+  /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 1150px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO VICTOR | feature/producto | @media (max-width: 1150px) | COPIAR DESDE AQUI */
+  .platform-layout,
+  .split-intro {
+    gap: 48px;
+  }
+  /* REPARTO FIN VICTOR | feature/producto | @media (max-width: 1150px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO JEAN | feature/planes | @media (max-width: 1150px) | COPIAR DESDE AQUI */
+  .price-card {
+    padding: 24px;
+  }
+  .price-card.featured {
+    padding: 23px;
+  }
+  /* REPARTO FIN JEAN | feature/planes | @media (max-width: 1150px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO SIMON | feature/equipo | @media (max-width: 1150px) | COPIAR DESDE AQUI */
+  .team-grid {
+    gap: 14px;
+  }
+  .team-member {
+    padding-inline: 12px;
+  }
+  /* REPARTO FIN SIMON | feature/equipo | @media (max-width: 1150px) | COPIAR HASTA AQUI */
+}
+@media (max-width: 1000px) {
+  /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 1000px) | COPIAR DESDE AQUI */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-block: 32px 0;
+  }
+  .hero-photo {
+    object-position: left;
+    opacity: 0.12;
+  }
+  .hero-copy {
+    padding-block: 0;
+  }
+  .hero-product {
+    min-height: 0;
+    justify-content: flex-end;
+  }
+  .hero-hand {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: right center;
+  }
+  .hero-footnote {
+    display: none;
+  }
+  .nav-toggle {
+    display: inline-grid;
+  }
+  .site-nav {
+    display: none;
+  }
+  .header-actions {
+    margin-left: auto;
+  }
+  .site-header.open .site-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 18px 32px;
+    background: white;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 16px 20px #0f172a10;
+    gap: 0;
+  }
+  .site-header.open .site-nav a {
+    padding: 14px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .section {
+    padding-block: 76px;
+  }
+  /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 1000px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO VICTOR | feature/producto | @media (max-width: 1000px) | COPIAR DESDE AQUI */
+  .principles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .platform-layout {
+    gap: 35px;
+  }
+  .platform-copy h2 {
+    font-size: 32px;
+  }
+  /* REPARTO FIN VICTOR | feature/producto | @media (max-width: 1000px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO JEAN | feature/planes | @media (max-width: 1000px) | COPIAR DESDE AQUI */
+  .pricing-grid {
+    gap: 14px;
+  }
+  .price-card {
+    padding: 20px;
+  }
+  .price-card.featured {
+    padding: 19px;
+  }
+  .price-card h3 {
+    font-size: 21px;
+  }
+  .price-card .btn {
+    font-size: 12px;
+    padding-inline: 12px;
+    gap: 8px;
+  }
+  .plan-description {
+    min-height: 88px;
+  }
+  /* REPARTO FIN JEAN | feature/planes | @media (max-width: 1000px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO SIMON | feature/equipo | @media (max-width: 1000px) | COPIAR DESDE AQUI */
+  .team-member h3 {
+    font-size: 14px;
+  }
+  /* REPARTO FIN SIMON | feature/equipo | @media (max-width: 1000px) | COPIAR HASTA AQUI */
+}
+@media (max-width: 760px) {
+  /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 760px) | COPIAR DESDE AQUI */
+  .container {
+    width: calc(100% - 40px);
+  }
+  .header-inner {
+    min-height: 72px;
+    gap: 12px;
+  }
+  .brand > span {
+    font-size: 22px;
+  }
+  .brand > img {
+    width: 36px;
+    height: 36px;
+  }
+  .header-actions {
+    gap: 12px;
+  }
+  .header-divider {
+    display: none;
+  }
+  .header-actions .btn {
+    padding: 8px 12px;
+  }
+  .hero-inner {
+    padding-block: 36px 0;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .hero-copy {
+    padding: 0;
+  }
+  .hero-hand {
+    height: 280px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero-description {
+    font-size: 14px;
+    max-width: 560px;
+  }
+  .hero .eyebrow {
+    font-size: 9px;
+    gap: 7px;
+  }
+  .hero-footnote {
+    display: none;
+  }
+  .hero-actions .btn {
+    font-size: 13px;
+    padding-inline: 18px;
+  }
+  .benefit-list {
+    gap: 14px;
+    padding-block: 21px;
+  }
+  .benefit-list li {
+    flex-direction: column;
+    text-align: center;
+    font-size: 11px;
+    gap: 7px;
+    padding-inline: 4px;
+  }
+  .benefit-list li + li {
+    border: 0;
+  }
+  .section {
+    padding-block: 60px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .split-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .section-intro {
+    margin-bottom: 32px;
+  }
+  /* REPARTO INICIO JOSE | feature/testimonios | @media (max-width: 760px) | COPIAR DESDE AQUI */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  /* REPARTO FIN JOSE | feature/testimonios | @media (max-width: 760px) | COPIAR HASTA AQUI */
+  /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 760px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO VICTOR | feature/producto | @media (max-width: 760px) | COPIAR DESDE AQUI */
+  .principles-grid {
+    gap: 28px 24px;
+  }
+  .principles-grid h3 {
+    font-size: 17px;
+    min-height: 44px;
+  }
+  .platform-layout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+  }
+  .network-preview {
+    max-width: 550px;
+    width: 100%;
+    margin-inline: auto;
+  }
+  /* REPARTO FIN VICTOR | feature/producto | @media (max-width: 760px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO JEAN | feature/planes | @media (max-width: 760px) | COPIAR DESDE AQUI */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  .pricing-controls {
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  .price-card {
+    padding: 26px;
+  }
+  .price-card.featured {
+    padding: 25px;
+  }
+  .plan-description {
+    min-height: 0;
+  }
+  .price-card h3 {
+    font-size: 25px;
+  }
+  .price-card .btn {
+    font-size: 14px;
+    min-height: 48px;
+  }
+  .price-card ul {
+    margin-block: 22px;
+  }
+  /* REPARTO FIN JEAN | feature/planes | @media (max-width: 760px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO SIMON | feature/equipo | @media (max-width: 760px) | COPIAR DESDE AQUI */
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 16px;
+  }
+  .team-member h3 {
+    font-size: 15px;
+  }
+  /* REPARTO FIN SIMON | feature/equipo | @media (max-width: 760px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO YNGRID | feature/cierre | @media (max-width: 760px) | COPIAR DESDE AQUI */
+  .final-cta {
+    padding-block: 54px;
+  }
+  .final-cta h2 {
+    font-size: 32px;
+  }
+  .footer-top {
+    flex-wrap: wrap;
+    padding-block: 30px;
+    gap: 25px;
+  }
+  .footer-top nav {
+    order: 3;
+    width: 100%;
+    gap: 24px;
+  }
+  .footer-columns {
+    order: 3;
+    width: 100%;
+    gap: 35px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+  }
+  /* REPARTO FIN YNGRID | feature/cierre | @media (max-width: 760px) | COPIAR HASTA AQUI */
+}
+@media (max-width: 480px) {
+  /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 480px) | COPIAR DESDE AQUI */
+  .container {
+    width: calc(100% - 32px);
+  }
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding-block: 10px;
+  }
+  .header-actions {
+    gap: 10px;
+  }
+  .brand > span {
+    font-size: 21px;
+  }
+  .brand > img {
+    width: 33px;
+    height: 33px;
+  }
+  .brand {
+    gap: 4px;
+  }
+  .brand small {
+    font-size: 8px;
+  }
+  .header-actions .btn {
+    min-height: 34px;
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  .header-actions button {
+    font-size: 11px;
+  }
+  .language-toggle {
+    gap: 3px;
+  }
+  .language-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+  .language-label {
+    min-width: 17px;
+  }
+  .nav-toggle {
+    width: 30px;
+    height: 34px;
+    border: 0;
+  }
+  .login-button {
+    padding: 7px 0;
+  }
+  .hero-inner {
+    padding-top: 28px;
+  }
+  .hero-hand {
+    height: 235px;
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+  .hero-description {
+    font-size: 13px;
+    line-height: 1.75;
+    margin-top: 20px;
+  }
+  .hero .eyebrow {
+    font-size: 8px;
+    max-width: 330px;
+  }
+  .hero-actions {
+    gap: 10px;
+    margin-top: 24px;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    flex: 1;
+    padding: 12px 9px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .hero-actions svg {
+    width: 17px;
+    height: 17px;
+  }
+  .benefit-list {
+    gap: 8px;
+  }
+  .benefit-list li {
+    font-size: 10px;
+  }
+  /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 480px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO VICTOR | feature/producto | @media (max-width: 480px) | COPIAR DESDE AQUI */
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+  .principles-grid h3 {
+    min-height: 0;
+  }
+  .principle-top {
+    margin-bottom: 18px;
+  }
+  .principles-grid article {
+    padding-top: 18px;
+  }
+  /* REPARTO FIN VICTOR | feature/producto | @media (max-width: 480px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 480px) | COPIAR DESDE AQUI */
+  .section-intro h2,
+  h2 {
+    font-size: 29px;
+  }
+  /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 480px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO SIMON | feature/equipo | @media (max-width: 480px) | COPIAR DESDE AQUI */
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 14px;
+  }
+  .team-member h3 {
+    font-size: 14px;
+  }
+  .team-subtitle {
+    text-align: left;
+    font-size: 12px;
+  }
+  /* REPARTO FIN SIMON | feature/equipo | @media (max-width: 480px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO JEAN | feature/planes | @media (max-width: 480px) | COPIAR DESDE AQUI */
+  .pricing-controls > span {
+    font-size: 10px;
+  }
+  .segmented-control button {
+    min-width: 52px;
+  }
+  /* REPARTO FIN JEAN | feature/planes | @media (max-width: 480px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO VICTOR | feature/producto | @media (max-width: 480px) | COPIAR DESDE AQUI */
+  .map-scene {
+    height: 270px;
+  }
+  /* REPARTO FIN VICTOR | feature/producto | @media (max-width: 480px) | COPIAR HASTA AQUI */
+  /* REPARTO INICIO YNGRID | feature/cierre | @media (max-width: 480px) | COPIAR DESDE AQUI */
+  .final-cta h2 {
+    font-size: 29px;
+  }
+  .final-cta p {
+    font-size: 13px;
+  }
+  .footer-top nav {
+    gap: 20px;
+  }
+  /* REPARTO FIN YNGRID | feature/cierre | @media (max-width: 480px) | COPIAR HASTA AQUI */
+}
+@media (max-width: 380px) {
+  /* REPARTO INICIO JOSE | feature/inicio | @media (max-width: 380px) | COPIAR DESDE AQUI */
+  .brand small {
+    display: none;
+  }
+  .header-inner {
+    column-gap: 5px;
+  }
+  .brand > span {
+    font-size: 18px;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .brand > img {
+    width: 29px;
+    height: 29px;
+  }
+  .header-actions .btn {
+    padding-inline: 8px;
+  }
+  .language-toggle svg {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero-hand {
+    height: 175px;
+  }
+  .hero-footnote {
+    font-size: 9px;
+  }
+  /* REPARTO FIN JOSE | feature/inicio | @media (max-width: 380px) | COPIAR HASTA AQUI */
+}
+/* REPARTO INICIO JOSE | feature/inicio | estilos base | COPIAR DESDE AQUI */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+/* REPARTO FIN JOSE | feature/inicio | estilos base | COPIAR HASTA AQUI */
