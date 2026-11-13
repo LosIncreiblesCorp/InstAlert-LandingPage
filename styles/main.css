@@ -460,7 +460,6 @@ p {
 }
 .product-video {
   max-width: 920px;
-  aspect-ratio: 16 / 9;
   margin-inline: auto;
 }
 .product-video iframe,
@@ -470,15 +469,17 @@ p {
   height: 100%;
   border: 0;
 }
+.product-video iframe {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
 .video-overlay {
-  position: absolute;
-  inset: auto 0 0;
+  position: relative;
   display: grid;
   gap: 8px;
   padding: 28px 30px 26px;
   color: white;
-  background: linear-gradient(transparent, #0f172ae8 35%);
-  pointer-events: none;
+  background: var(--navy);
 }
 .video-kicker {
   color: #b9cdfc;

@@ -163,14 +163,15 @@ document.querySelectorAll("[data-auth]").forEach((button) => {
 /* REPARTO INICIO VICTOR | feature/producto | copiar URL de videos; compartido con SIMON | COPIAR DESDE AQUI */
 document.querySelectorAll("[data-video-action]").forEach((button) => {
   button.addEventListener("click", async () => {
+    const videoUrl = siteConfig.videos[button.dataset.videoAction];
     try {
-      await navigator.clipboard.writeText(siteConfig.videoPlaceholderUrl);
+      await navigator.clipboard.writeText(videoUrl);
       button.querySelector("span").textContent =
         currentLanguage === "es" ? "URL copiada" : "URL copied";
     } catch {
       window.prompt(
         currentLanguage === "es" ? "Copia esta URL:" : "Copy this URL:",
-        siteConfig.videoPlaceholderUrl,
+        videoUrl,
       );
     }
   });
