@@ -36,9 +36,9 @@ Este repositorio contiene el sitio público de presentación. La aplicación web
 | Rama estable | `main` |
 | Rama de integración | `develop` |
 | Rama de esta documentación | `feature/readme-documentation`, creada desde `develop` |
-| Próxima versión recomendada para este cambio | `2.0.1`, porque solo amplía la documentación |
+| Versión de esta actualización | **`2.0.1`**, registrada en [`VERSION`](VERSION); actualización de documentación |
 
-La referencia anterior no implica que `2.0.1` ya esté publicada. Una versión `2.1.0` se reservaría para una entrega que incorpore nuevas funcionalidades compatibles. El cierre de una release y su etiqueta deben representar los cambios realmente integrados.
+La versión `2.0.1` identifica esta actualización de documentación. La última release etiquetada verificada sigue siendo `v2.0.0`; integrar en `develop` no publica automáticamente una nueva release ni modifica `main`. Una versión `2.1.0` se reservaría para una entrega que incorpore nuevas funcionalidades compatibles.
 
 ## Producto y usuarios
 
@@ -121,6 +121,7 @@ No es necesario arrancar el backend para visualizar la landing. Los accesos de r
 InstAlert-LandingPage/
 ├── index.html                       # Contenido, traducciones y videos embebidos
 ├── README.md                        # Documentación de ejecución y mantenimiento
+├── VERSION                          # Versión de la actualización: 2.0.1
 ├── styles/
 │   └── main.css                     # Estilos generales y reglas responsive
 ├── scripts/
@@ -323,7 +324,7 @@ git commit -m "docs(landing): completar guia de ejecucion y mantenimiento"
 git push -u origin feature/nombre-del-cambio
 ```
 
-Abrir un Pull Request hacia `develop`. Para una release que solo incluya esta documentación, se recomienda `release/2.0.1`, creada después de integrar y revisar el README en `develop`. La etiqueta `v2.0.1` se crea al cerrar esa release; este documento no ejecuta ni acredita esas integraciones.
+Abrir un Pull Request hacia `develop`. Esta actualización utiliza la versión `2.0.1`. Después de integrarla y revisarla en `develop`, el cierre de entrega puede prepararse en `release/2.0.1`. La etiqueta `v2.0.1` se crea al cerrar esa release; la integración de esta documentación en `develop` no crea la etiqueta ni modifica `main`.
 
 La [guía de reparto](docs/reparto-gitflow.md) conserva instrucciones del armado inicial. Sus ejemplos de configuración pendiente o de carpeta de referencia describen ese contexto histórico; para el comportamiento actual consultar los archivos de código y este README.
 
